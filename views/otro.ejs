@@ -1,0 +1,16 @@
+<%- include("templates/header", {titulo:"Otro"}) %>
+
+<div class="alert alert-primary">Estas en otro</div>
+<h1><%= nombre %></h1>
+
+<form action="/otro" id="formulario" method="POST">
+    <label for="">Nombre</label>
+    <input type="text" name="nombre" id="nombre" class="form-control mb-3" placeholder="Nombre">
+
+    <label for="">Edad</label>
+    <input type="text" name="edad" id="edad" class="form-control mb-3" placeholder="Edad">
+
+    <button type="submit" class="btn btn-primary" >Enviar datos</button>
+</form>
+
+<%- include("templates/footer") %>

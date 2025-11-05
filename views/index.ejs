@@ -1,0 +1,30 @@
+<%- include("templates/header", {titulo:"Página de inicio"}) %>
+
+<%
+var a = 5
+var b = 10
+var suma = a + b
+%>
+
+<div class="alert alert-primary">La suma es: <%= suma %></div>
+<h1><%= nombre %></h1>
+<h2><%= grupo %></h2>
+
+<h2>Desayunos</h2>
+<ul>
+    <% desayunos.forEach(desayuno => { %>
+        <li><%= desayuno %></li>
+    <% }) %>
+</ul>
+
+<table class="table">
+    <% desayunos.forEach(desayuno => { %>
+    <tr>
+        <td><%= desayuno %></td>
+    </tr>
+    <% }) %>
+</table>
+
+<a href="/abc/<%= nombre %>">Pasar el nombre</a>
+
+<%- include("templates/footer") %>

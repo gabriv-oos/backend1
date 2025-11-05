@@ -1,0 +1,25 @@
+<%- include("templates/header.ejs", {titulo:"Mostrar Contactos"}) %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Modificar/Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contactosMongo.forEach(contacto => { %>
+            <tr>
+                <td><%= contacto.nombre %></td>
+                <td><%= contacto.edad %></td>
+                <td>
+                    <a href="/editarContacto/<%= contacto._id %>">Editar</a>
+                    <a href="/borrarContacto/<%= contacto._id %>">Borrar</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include("templates/footer.ejs") %>

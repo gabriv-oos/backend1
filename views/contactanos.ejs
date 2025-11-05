@@ -1,0 +1,15 @@
+<%- include("templates/header", {titulo:"Contactanos"}) %>
+
+<div class="alert alert-info">Página de contacto</div>
+
+<form action="/otro" method="POST">
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" class="form-control mb-3">
+
+    <label for="edad">Edad</label>
+    <input type="number" name="edad" id="edad" class="form-control mb-3">
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+
+<%- include("templates/footer") %>

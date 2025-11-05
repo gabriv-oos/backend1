@@ -1,0 +1,16 @@
+<%- include("templates/header.ejs", {titulo:"Editar Contacto"}) %>
+
+<form action="/editarContacto" method="POST">
+
+    <input type="hidden" value="<%= contactoMongo._id %>" name="id">
+
+    <label for="">Nombre</label>
+    <input type="text" name="nombre" class="form-control mb-3" value="<%= contactoMongo.nombre %>">
+
+    <label for="">Edad</label>
+    <input type="text" name="edad" class="form-control mb-3" value="<%= contactoMongo.edad %>">
+
+    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+</form>
+
+<%- include("templates/footer.ejs") %>
